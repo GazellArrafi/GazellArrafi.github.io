@@ -1,0 +1,130 @@
+:root{
+  --text-color: #113946;
+  --container-color: #bca37f;
+  --background-color: #ead7bb;
+  --heading-color: #0e262e;
+  --button-background-color: white;
+  --button-text-color: black;
+}
+
+html[data-color-mode="dark"]{
+  --text-color: #BCA37F;
+  --container-color: #113946;
+  --background-color: #0e262e;
+  --heading-color: #EAD7BB;
+  --button-background-color: black;
+  --button-text-color: white;
+}
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: Nunito, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav p{
+  margin: 0;
+  padding: 5px;
+}
+.advice{
+  font-size: 0.8rem;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: var(--container-color);
+  padding: 2em;
+}
+.container p{
+  text-align: justify;
+}
+.container p span{
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.6em;
+  line-height: 1;
+  color: var(--heading-color);
+}
+button{
+  /* display: block;
+  margin: 50px auto 0;
+  width: fit-content; */
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+div .By{
+  position: absolute;
+  left: 64px;
+  top: 370px;
+  width: 210px;
+  height: 210px;
+  margin-right: 20px;
+}
+div .Bn{
+  position: absolute;
+  left: 50px;
+  top: 400px;
+  width: 210px;
+  height: 210px;
+}
+.selection p{
+  font-size: 0.6rem;
+}
+.card{
+  display: flex;
+  gap: 20px;
+}
+#By input[type="button"]{
+  background-color: var(--background-color);
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+  color: var(--heading-color);
+  padding: 10px;
+  transition: transform 0.1s ease-in-out;
+}
+.shake {
+  animation: shakeButton 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite; /* Animasi shake */
+}
+
+@keyframes shakeButton {
+  0% { transform: translate(0, 0) rotate(0); }
+  25% { transform: translate(-1px, -1px) rotate(-2deg); }
+  50% { transform: translate(1px, 1px) rotate(2deg); }
+  75% { transform: translate(-1px, 1px) rotate(-2deg); }
+  100% { transform: translate(1px, -1px) rotate(2deg); }
+}
+#Bn {
+  position: relative;
+  width: 500px; /* Atur lebar sesuai kebutuhan */
+  height: 500px; /* Atur tinggi sesuai kebutuhan */
+  overflow: hidden; /* Hindari overflow saat tombol berpindah */
+
+}
+
+#Bn input[type="button"] {
+  transition: transform 0s ease-in-out; /* Efek transisi saat berubah posisi */
+  background-color: var(--background-color);
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+  color: var(--heading-color);  
+  padding: 10px;
+}
