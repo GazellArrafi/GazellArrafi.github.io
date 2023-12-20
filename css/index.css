@@ -178,7 +178,9 @@ div .Bn{
   color: var(--heading-color);  
   padding: 10px;
 }
-
+h6{
+  color: var(--container-color);
+}
 #By input[type="button"]{
   background-color: var(--background-color);
   border: 1px solid var(--background-color);
